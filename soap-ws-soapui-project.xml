@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="9e5949d8-4253-4a26-b84c-729c07bc6323" activeEnvironment="Default" name="soap-ws" resourceRoot="${projectDir}" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="9e5949d8-4253-4a26-b84c-729c07bc6323" activeEnvironment="Default" name="soap-ws" resourceRoot="${projectDir}" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:interface xsi:type="con:WsdlInterface" id="eb909baa-c6c6-4849-96bb-378d1b1a6326" wsaVersion="NONE" name="GetCustomerBinding" type="wsdl" bindingName="{http://ws-services/CRM/GetCustomer/v1}GetCustomerBinding" soapVersion="1_1" anonymous="optional" definition="../../../../tmp/POC/GetCustomerService/WSDL/GetCustomer.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
@@ -109,33 +109,70 @@
     <con:properties/>
     <con:mockOperation name="GetCustomer" id="c39f377f-8956-4a0b-97e2-3cc3f4b900fd" interface="GetCustomerBinding" operation="GetCustomer">
       <con:settings/>
-      <con:defaultResponse>Response 1</con:defaultResponse>
-      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
-      <con:response name="Response 1" id="cb844f75-0fa7-4b75-955e-beaa0e1055cd" httpResponseStatus="200" encoding="UTF-8">
+      <con:defaultResponse>not-found</con:defaultResponse>
+      <con:dispatchStyle>QUERY_MATCH</con:dispatchStyle>
+      <con:response name="06123216066" id="cb844f75-0fa7-4b75-955e-beaa0e1055cd" httpResponseStatus="200" encoding="UTF-8">
         <con:settings/>
         <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ws-services/CRM/GetCustomer/v1/GetCustomerResponse/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:GetCustomerResponse>
-         <v1:ID>10</v1:ID>
-         <v1:name>gero et</v1:name>
-         <v1:documentNumber>sonoras imperio</v1:documentNumber>
+         <v1:ID>564</v1:ID>
+         <v1:name>João da Silva</v1:name>
+         <v1:documentNumber>06123216066</v1:documentNumber>
          <v1:contactabelVia>
-            <!--Optional:-->
-            <v1:homePhone>quae divum incedo</v1:homePhone>
-            <!--Optional:-->
-            <v1:mobilePhone>verrantque per auras</v1:mobilePhone>
-            <!--Optional:-->
-            <v1:workPhone>per auras</v1:workPhone>
-            <!--Optional:-->
-            <v1:email>circum claustra</v1:email>
+            <v1:mobilePhone>11996526341</v1:mobilePhone>
+            <v1:email>joao@silva.com</v1:email>
          </v1:contactabelVia>
       </v1:GetCustomerResponse>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:responseContent>
         <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws-services/CRM/GetCustomer/v1/GetCustomer"/>
       </con:response>
-      <con:dispatchConfig/>
+      <con:response name="03226014013" id="cb844f75-0fa7-4b75-955e-beaa0e1055cd" httpResponseStatus="200" encoding="UTF-8">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ws-services/CRM/GetCustomer/v1/GetCustomerResponse/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:GetCustomerResponse>
+         <v1:ID>325</v1:ID>
+         <v1:name>Maria dos Santos</v1:name>
+         <v1:documentNumber>03226014013</v1:documentNumber>
+         <v1:contactabelVia>
+            <v1:homePhone>1135265656</v1:homePhone>
+            <v1:mobilePhone>11985457852</v1:mobilePhone>
+         </v1:contactabelVia>
+      </v1:GetCustomerResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws-services/CRM/GetCustomer/v1/GetCustomer"/>
+      </con:response>
+      <con:response name="not-found" id="dfd37869-193d-4595-954e-a7c153e243bd" httpResponseStatus="500" encoding="UTF-8">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>Error</faultcode>
+      <faultstring>Customer not found!</faultstring>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws-services/CRM/GetCustomer/v1/GetCustomer"/>
+      </con:response>
+      <con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:query>
+          <con:name>03226014013</con:name>
+          <con:query>//*:documentNumber</con:query>
+          <con:match>03226014013</con:match>
+          <con:response>03226014013</con:response>
+        </con:query>
+        <con:query>
+          <con:name>06123216066</con:name>
+          <con:query>//*:documentNumber</con:query>
+          <con:match>06123216066</con:match>
+          <con:response>06123216066</con:response>
+        </con:query>
+      </con:dispatchConfig>
     </con:mockOperation>
   </con:mockService>
   <con:properties/>
