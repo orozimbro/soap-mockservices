@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="9e5949d8-4253-4a26-b84c-729c07bc6323" activeEnvironment="Default" name="soap-ws" resourceRoot="${projectDir}" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:WsdlInterface" id="eb909baa-c6c6-4849-96bb-378d1b1a6326" wsaVersion="NONE" name="GetCustomerBinding" type="wsdl" bindingName="{http://ws-services/CRM/GetCustomer/v1}GetCustomerBinding" soapVersion="1_1" anonymous="optional" definition="../../../../tmp/POC/GetCustomerService/WSDL/GetCustomer.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="file:\C:\tmp\POC\GetCustomerService\WSDL\GetCustomer.wsdl">
+      <con:part>
+        <con:url>file:\C:\tmp\POC\GetCustomerService\WSDL\GetCustomer.wsdl</con:url>
+        <con:content><![CDATA[<wsdl:definitions name="GetCustomer" targetNamespace="http://ws-services/CRM/GetCustomer/v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws-services/CRM/GetCustomer/v1" xmlns:req="http://ws-services/CRM/GetCustomer/v1/GetCustomerRequest/v1" xmlns:resp="http://ws-services/CRM/GetCustomer/v1/GetCustomerResponse/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:erro="http://telefonica.br/Common/ErrorInfo/v1">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import namespace="http://ws-services/CRM/GetCustomer/v1/GetCustomerRequest/v1" schemaLocation="../XSD/GetCustomerRequest.xsd"/>
+      <xsd:import namespace="http://ws-services/CRM/GetCustomer/v1/GetCustomerResponse/v1" schemaLocation="../XSD/GetCustomerResponse.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCustomerRequest">
+    <wsdl:part name="GetCustomerRequest" element="req:GetCustomerRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetCustomerResponse">
+    <wsdl:part name="GetCustomerResponse" element="resp:GetCustomerResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="GetCustomerPortType">
+    <wsdl:operation name="GetCustomer">
+      <wsdl:input message="tns:GetCustomerRequest"/>
+      <wsdl:output message="tns:GetCustomerResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetCustomerBinding" type="tns:GetCustomerPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetCustomer">
+      <soap:operation soapAction="http://ws-services/CRM/GetCustomer/v1/GetCustomer"/>
+      <wsdl:input>
+        <soap:body parts="GetCustomerRequest" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="GetCustomerResponse" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetCustomerService">
+    <wsdl:port name="GetCustomerPort" binding="tns:GetCustomerBinding">
+      <soap:address location="http://ws-services/CRM/GetCustomer/v1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+      <con:part>
+        <con:url>file:\C:\tmp\POC\GetCustomerService\XSD\GetCustomerRequest.xsd</con:url>
+        <con:content><![CDATA[<xs:schema targetNamespace="http://ws-services/CRM/GetCustomer/v1/GetCustomerRequest/v1" elementFormDefault="qualified" xmlns:tns="http://ws-services/CRM/GetCustomer/v1/GetCustomerRequest/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetCustomerRequest" type="tns:GetCustomerParameters"/>
+  <xs:complexType name="GetCustomerParameters">
+    <xs:sequence>
+      <xs:element name="documentNumber" type="xs:string" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content>
+        <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+      </con:part>
+      <con:part>
+        <con:url>file:\C:\tmp\POC\GetCustomerService\XSD\GetCustomerResponse.xsd</con:url>
+        <con:content><![CDATA[<xs:schema targetNamespace="http://ws-services/CRM/GetCustomer/v1/GetCustomerResponse/v1" elementFormDefault="qualified" xmlns:tns="http://ws-services/CRM/GetCustomer/v1/GetCustomerResponse/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetCustomerResponse" type="tns:GetCustomerResult"/>
+  <xs:complexType name="GetCustomerResult">
+    <xs:sequence>
+      <xs:element name="ID" type="xs:long" minOccurs="1"/>
+      <xs:element name="name" type="xs:string" minOccurs="1"/>
+      <xs:element name="documentNumber" type="xs:string" minOccurs="1"/>
+      <xs:element name="contactabelVia" type="tns:ContactabelVia" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ContactabelVia">
+    <xs:sequence>
+      <xs:element name="homePhone" type="xs:string" minOccurs="0"/>
+      <xs:element name="mobilePhone" type="xs:string" minOccurs="0"/>
+      <xs:element name="workPhone" type="xs:string" minOccurs="0"/>
+      <xs:element name="email" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content>
+        <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://ws-services/CRM/GetCustomer/v1</con:endpoint>
+    </con:endpoints>
+    <con:operation id="344a42e3-6139-47d5-a3de-8a4af1eb5a20" isOneWay="false" action="http://ws-services/CRM/GetCustomer/v1/GetCustomer" name="GetCustomer" bindingOperationName="GetCustomer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="2875a789-3d03-42c2-ab17-680ff7a989c7" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://ws-services/CRM/GetCustomer/v1</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ws-services/CRM/GetCustomer/v1/GetCustomerRequest/v1">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <v1:GetCustomerRequest>\r
+         <v1:documentNumber>gero et</v1:documentNumber>\r
+      </v1:GetCustomerRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws-services/CRM/GetCustomer/v1/GetCustomer"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:mockService id="26745db9-96f6-4e1a-b275-5ba2bb19fd0a" port="8080" path="/customer" host="localhost" name="ms-customer" bindToHostOnly="false" docroot="">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting>
+    </con:settings>
+    <con:properties/>
+    <con:mockOperation name="GetCustomer" id="c39f377f-8956-4a0b-97e2-3cc3f4b900fd" interface="GetCustomerBinding" operation="GetCustomer">
+      <con:settings/>
+      <con:defaultResponse>Response 1</con:defaultResponse>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:response name="Response 1" id="cb844f75-0fa7-4b75-955e-beaa0e1055cd" httpResponseStatus="200" encoding="UTF-8">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://ws-services/CRM/GetCustomer/v1/GetCustomerResponse/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:GetCustomerResponse>
+         <v1:ID>10</v1:ID>
+         <v1:name>gero et</v1:name>
+         <v1:documentNumber>sonoras imperio</v1:documentNumber>
+         <v1:contactabelVia>
+            <!--Optional:-->
+            <v1:homePhone>quae divum incedo</v1:homePhone>
+            <!--Optional:-->
+            <v1:mobilePhone>verrantque per auras</v1:mobilePhone>
+            <!--Optional:-->
+            <v1:workPhone>per auras</v1:workPhone>
+            <!--Optional:-->
+            <v1:email>circum claustra</v1:email>
+         </v1:contactabelVia>
+      </v1:GetCustomerResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws-services/CRM/GetCustomer/v1/GetCustomer"/>
+      </con:response>
+      <con:dispatchConfig/>
+    </con:mockOperation>
+  </con:mockService>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+</con:soapui-project>
