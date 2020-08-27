@@ -102,6 +102,777 @@
       </con:call>
     </con:operation>
   </con:interface>
+  <con:interface xsi:type="con:WsdlInterface" id="538f676a-9149-44bd-89a2-44112e3f55f7" wsaVersion="NONE" name="ReceberResultadoRequisicaoBinding" type="wsdl" bindingName="{http://sittel.mpf.mp.br/schemas/servicos}ReceberResultadoRequisicaoBinding" soapVersion="1_1" anonymous="optional" definition="../../../../tmp/sittel/sittel-receber-resultado-requisicao-ep-2.0.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="file:/C:/tmp/sittel/sittel-receber-resultado-requisicao-ep-2.0.wsdl">
+      <con:part>
+        <con:url>file:/C:/tmp/sittel/sittel-receber-resultado-requisicao-ep-2.0.wsdl</con:url>
+        <con:content><![CDATA[<wsdl:definitions name="sittel-receber-resultado-requisicao-2.0" targetNamespace="http://sittel.mpf.mp.br/schemas/servicos" xmlns:sdc="http://sittel.gov.br/schemas/sittel-dados-comuns-2.0" xmlns:sws="http://sittel.mpf.mp.br/schemas/servicos" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>sittel-receber-resultado-requisicao-ep-2.0.wsdl
+		Copyright (c) 2017 - ASSPA-PGR
+		Todos os direitos reservados
+		Alterado pelo MPM/MPU</wsdl:documentation>
+  <wsdl:import location="sittel-receber-resultado-requisicao-2.0.wsdl" namespace="http://sittel.mpf.mp.br/schemas/servicos"/>
+  <wsdl:binding name="ReceberResultadoRequisicaoBinding" type="sws:ReceberResultadoRequisicaoPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ReceberResultadoRequisicaoOperation">
+      <soap:operation soapAction="http://sittel.mpf.mp.br/schemas/servicos/ReceberResultadoRequisicaoOperation"/>
+      <wsdl:input name="ReceberResultadoRequisicaoInput">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ReceberResultadoRequisicaoOutput">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceberResultadoRequisicaoService">
+    <wsdl:port name="ReceberResultadoRequisicaoPort" binding="sws:ReceberResultadoRequisicaoBinding">
+      <soap:address location="https://sittel.mpm.mp.br/sittel2/servicos/ReceberResultadoRequisicao"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+      <con:part>
+        <con:url>file:\C:\tmp\sittel\sittel-receber-resultado-requisicao-2.0.wsdl</con:url>
+        <con:content><![CDATA[<wsdl:definitions name="sittel-receber-resultado-requisicao-2.0" targetNamespace="http://sittel.mpf.mp.br/schemas/servicos" xmlns:sdc="http://sittel.gov.br/schemas/sittel-dados-comuns-2.0" xmlns:sws="http://sittel.mpf.mp.br/schemas/servicos" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>sittel-receber-resultado-requisicao-2.0.wsdl
+		Copyright (c) 2017 - ASSPA-PGR
+		Todos os direitos reservados
+		Alterado pelo MPM/MPU</wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://sittel.mpf.mp.br/schemas/servicos">
+      <xsd:import namespace="http://sittel.gov.br/schemas/sittel-dados-comuns-2.0" schemaLocation="sittel-dados-comuns-2.0.xsd"/>
+      <xsd:element name="ReceberResultadoRequisicaoRequest" type="sdc:ResultadoRequisicao"/>
+      <xsd:element name="ReceberResultadoRequisicaoResponse" type="sdc:OkErroResponse"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ReceberResultadoRequisicaoRequestMessage">
+    <wsdl:part name="ReceberResultadoRequisicaoRequestPart" element="sws:ReceberResultadoRequisicaoRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ReceberResultadoRequisicaoResponseMessage">
+    <wsdl:part name="ReceberResultadoRequisicaoResponsePart" element="sws:ReceberResultadoRequisicaoResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ReceberResultadoRequisicaoPortType">
+    <wsdl:operation name="ReceberResultadoRequisicaoOperation">
+      <wsdl:input message="sws:ReceberResultadoRequisicaoRequestMessage" name="ReceberResultadoRequisicaoInput"/>
+      <wsdl:output message="sws:ReceberResultadoRequisicaoResponseMessage" name="ReceberResultadoRequisicaoOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+      <con:part>
+        <con:url>file:\C:\tmp\sittel\sittel-dados-comuns-2.0.xsd</con:url>
+        <con:content><![CDATA[<xsd:schema targetNamespace="http://sittel.gov.br/schemas/sittel-dados-comuns-2.0" xmlns="http://sittel.gov.br/schemas/sittel-dados-comuns-2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--sittel-dados-comuns-2.0.xsd
+		Copyright (c) 2017 - ASSPA-PGR
+		Todos os direitos reservados
+		Alterado pelo MPM/MPU-->
+  <!--OkErroResponse-->
+  <xsd:simpleType name="Status">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="OK|ERRO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CodigoErro">
+    <xsd:restriction base="xsd:long"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="DescricaoErro">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="1000"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="OkErroResponse">
+    <xsd:sequence>
+      <xsd:element name="status" type="Status" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="codigoErro" type="CodigoErro" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="descricaoErro" type="DescricaoErro" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--OrdemJudicial-->
+  <xsd:simpleType name="NumeroOficioJudicial">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="50"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NumeroOficioExtrajudicial">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="50"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NumeroCaso">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="28"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NumeroProcesso">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="50"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NumeroInqueritoProcedimento">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="50"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Data">
+    <xsd:annotation>
+      <xsd:documentation>Pattern: ddMMyyyy</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="8"/>
+      <xsd:pattern value="[0-9]{8}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SiglaUF">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="2"/>
+      <xsd:pattern value="AC|AL|AM|AP|BA|CE|DF|ES|GO|MA|MG|MS|MT|PA|PB|PR|PE|PI|RJ|RN|RO|RR|RS|SC|SE|SP|TO"></xsd:pattern>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Cidade">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="100"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Comarca">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="100"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="VaraCamaraOrgaoColegiado">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="100"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CargoMagistrado">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="100"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NomeMagistrado">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="100"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CargoAutoridadeDemandante">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="100"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NomeAutoridadeDemandante">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="100"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NumeroTerminal">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="30"/>
+      <xsd:pattern value="[0-9a-zA-Z*#]{1,30}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Email">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="254"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="OficioRetificador">
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="TesteConexao">
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+  <xsd:complexType name="OrdemJudicial">
+    <xsd:annotation>
+      <xsd:documentation>Representa uma ordem judicial/extrajudicial.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="codigoOrdem" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+      <xsd:choice minOccurs="1" maxOccurs="1">
+        <xsd:element name="numeroOficioJudicial" type="NumeroOficioJudicial" minOccurs="0" maxOccurs="1"/>
+        <xsd:element name="numeroOficioExtrajudicial" type="NumeroOficioExtrajudicial" minOccurs="0" maxOccurs="1"/>
+      </xsd:choice>
+      <xsd:element name="numeroCaso" type="NumeroCaso" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="numeroProcesso" type="NumeroProcesso" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="numeroInqueritoProcedimento" type="NumeroInqueritoProcedimento" minOccurs="0" maxOccurs="1"/>
+      <xsd:choice minOccurs="1" maxOccurs="1">
+        <xsd:element name="dataExpedicaoOficioJudicial" type="Data" minOccurs="0" maxOccurs="1"/>
+        <xsd:element name="dataExpedicaoOficioExtrajudicial" type="Data" minOccurs="0" maxOccurs="1"/>
+      </xsd:choice>
+      <xsd:element name="uf" type="SiglaUF" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="cidade" type="Cidade" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="comarca" type="Comarca" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="varaCamaraOrgaoColegiado" type="VaraCamaraOrgaoColegiado" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="cargoMagistrado" type="CargoMagistrado" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="nomeMagistrado" type="NomeMagistrado" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="cargoAutoridadeDemandante" type="CargoAutoridadeDemandante" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="nomeAutoridadeDemandante" type="NomeAutoridadeDemandante" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="telefoneAutoridadeDemandante" type="NumeroTerminal" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="emailContato" type="Email" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="decisaoJudicial" type="xsd:base64Binary" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="oficioRetificador" type="OficioRetificador" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="testeConexao" type="TesteConexao" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--Requisicao-->
+  <xsd:simpleType name="Cpf">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="11"/>
+      <xsd:pattern value="[0-9]{1,11}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Cnpj">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="14"/>
+      <xsd:pattern value="[0-9]{1,14}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DocumentoAssinante">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="50"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TipoDocumentoAssinante">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="RG"/>
+      <xsd:enumeration value="RNE"/>
+      <xsd:enumeration value="Passaporte"/>
+      <xsd:enumeration value="Outro"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NomeAssinante">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="100"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="IMEI">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="15"/>
+      <xsd:pattern value="[0-9]{1,15}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ICCID">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="20"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CGI">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="20"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Endereco">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="200"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Latitude">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="15"/>
+      <xsd:pattern value="[-|+][0-9]{1,2},[0-9]{8,}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Longitude">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="15"/>
+      <xsd:pattern value="[-|+][0-9]{1,3},[0-9]{8,}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="IP">
+    <xsd:annotation>
+      <xsd:documentation>Se IPV6 não utilizar abreviações.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:whiteSpace value="collapse"/>
+      <xsd:pattern value="[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}|[a-fA-F0-9]{1,4}:[a-fA-F0-9]{4}:[a-fA-F0-9]{4}:[a-fA-F0-9]{4}:[a-fA-F0-9]{4}:[a-fA-F0-9]{4}:[a-fA-F0-9]{4}:[a-fA-F0-9]{4}"></xsd:pattern>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PortaIP">
+    <xsd:annotation>
+      <xsd:documentation>Referência: http://en.wikipedia.org/wiki/Port_(computer_networking)</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:int">
+      <xsd:minInclusive value="-1"/>
+      <xsd:maxInclusive value="65535"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DataHora">
+    <xsd:annotation>
+      <xsd:documentation>Pattern: ddMMyyyyHHmmss Referência: http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[0-9]{14}"/>
+      <xsd:length value="14"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="FusoHorario">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[-|+][0-9]{1,2}"/>
+      <xsd:length value="3"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TipoServico">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="CHAMADAS"/>
+      <xsd:enumeration value="SMS"/>
+      <xsd:enumeration value="MMS"/>
+      <xsd:enumeration value="TODOS"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DirecaoServico">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ORIGINADAS"/>
+      <xsd:enumeration value="RECEBIDAS"/>
+      <xsd:enumeration value="TODAS"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DadosCadastraisInterlocutores">
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="ArquivoSittel">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="CADASTRO"/>
+      <xsd:enumeration value="CHAMADAS"/>
+      <xsd:enumeration value="ERB"/>
+      <xsd:enumeration value="CONEXAO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PrazoAtendimento">
+    <xsd:annotation>
+      <xsd:documentation>Pattern: DDHH</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[0-9]{4}"/>
+      <xsd:length value="4"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="RequisicaoRetificadora">
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+  <xsd:complexType name="Requisicao">
+    <xsd:sequence>
+      <xsd:element name="codigoOrdem" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="codigoRequisicao" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="cpf" type="Cpf" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="cnpj" type="Cnpj" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="documentoAssinante" type="DocumentoAssinante" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="tipoDocumentoAssinante" type="TipoDocumentoAssinante" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="nomeAssinante" type="NomeAssinante" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="numeroTerminalAssinante" type="NumeroTerminal" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="imei" type="IMEI" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="iccid" type="ICCID" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="cgiErb" type="CGI" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="enderecoErb" type="Endereco" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="latitudeInvestigada" type="Latitude" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="longitudeInvestigada" type="Longitude" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="enderecoIp" type="IP" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="numeroPorta" type="PortaIP" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="inicioPeriodoQuebra" type="DataHora" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="fimPeriodoQuebra" type="DataHora" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="fusohorario" type="FusoHorario" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="tipoServico" type="TipoServico" minOccurs="0" maxOccurs="2"/>
+      <xsd:element name="direcao" type="DirecaoServico" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="dadosCadastraisInterlocutor" type="DadosCadastraisInterlocutores" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="arquivo" type="ArquivoSittel" minOccurs="1" maxOccurs="4"/>
+      <xsd:element name="prazoAtendimento" type="PrazoAtendimento" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="requisicaoRetificadora" type="RequisicaoRetificadora" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="testeConexao" type="TesteConexao" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--ReqInterceptacao-->
+  <xsd:simpleType name="TipoRequisicao">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="INICIAL"/>
+      <xsd:enumeration value="PRORROGACAO"/>
+      <xsd:enumeration value="CANCELAMENTO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ConteudoInterceptado">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="TELEFONIA"/>
+      <xsd:enumeration value="TELEMATICA"/>
+      <xsd:enumeration value="TELEFONIA E TELEMATICA"/>
+      <xsd:enumeration value="EMAIL"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TipoInvestigado">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="TERMINAL"/>
+      <xsd:enumeration value="IMEI"/>
+      <xsd:enumeration value="IMSI"/>
+      <xsd:enumeration value="ID RADIO"/>
+      <xsd:enumeration value="EMAIL"/>
+      <xsd:enumeration value="MAC ADDRESS"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NumeroInterceptacao">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="DiasDuracao">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="2"/>
+      <xsd:pattern value="[0-9]{1,2}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ConfiguraDesvio">
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="AutoImei">
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+  <xsd:complexType name="AcessoIP">
+    <xsd:sequence>
+      <xsd:element name="usuario" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="senha" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="enderecoIp" type="IP" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="porta" type="PortaIP" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="caminho" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ReqInterceptacao">
+    <xsd:sequence>
+      <xsd:element name="codigoOrdem" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="codigoRequisicao" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="tipoRequisicao" type="TipoRequisicao" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ordemInicial" type="xsd:long" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="requisicaoInicial" type="xsd:long" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="conteudoInterceptado" type="ConteudoInterceptado" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="tipoInvestigado" type="TipoInvestigado" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="numeroInvestigado" type="NumeroInterceptacao" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="diasDuracao" type="DiasDuracao" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="inicioAgendado" type="DataHora" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="configuraDesvio" type="ConfiguraDesvio" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="numeroDesvio" type="NumeroInterceptacao" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="emailDesvio" type="Email" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="acessoIPDesvio" type="AcessoIP" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="autoImei" type="AutoImei" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="requisicaoRetificadora" type="RequisicaoRetificadora" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="testeConexao" type="TesteConexao" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--ReqAcesso-->
+  <xsd:simpleType name="TipoUsuario">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="NOVO"/>
+      <xsd:enumeration value="CADASTRADO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Nome">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="30"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Login">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="30"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="RG">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="30"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Cargo">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="30"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Matricula">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="30"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="UnidadeLotacao">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="100"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TipoAcao">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="INCLUIR/ATIVAR"/>
+      <xsd:enumeration value="PRORROGAR"/>
+      <xsd:enumeration value="EXCLUIR/DESATIVAR"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TipoAcesso">
+    <xsd:annotation>
+      <xsd:documentation>INT - PLAT.INTERCEPTACAO
+								SAT - SENHA ATENDIMENTO
+								OPE - SIST.PROP.OPERADORA</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="3"/>
+      <xsd:enumeration value="INT"/>
+      <xsd:enumeration value="SAT"/>
+      <xsd:enumeration value="OPE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PermissaoAcesso">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Dados Cadastrais(Alvo)"/>
+      <xsd:enumeration value="Dados Cadastrais(Interlocutor)"/>
+      <xsd:enumeration value="Dados Cadastrais(Pessoa de Interesse)"/>
+      <xsd:enumeration value="Historico Chamadas(Alvo)"/>
+      <xsd:enumeration value="Historico Chamadas(Interlocutor)"/>
+      <xsd:enumeration value="Historico Chamadas(Pessoa de Interesse)"/>
+      <xsd:enumeration value="Identificacao ERB(Alvo)"/>
+      <xsd:enumeration value="Identificacao ERB(Interlocutor)"/>
+      <xsd:enumeration value="Identificacao ERB(Pessoa de Interesse)"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="Usuario">
+    <xsd:sequence>
+      <xsd:element name="tipoUsuario" type="TipoUsuario" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="nome" type="Nome" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="login" type="Login" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="cpf" type="Cpf" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="rg" type="RG" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="cargo" type="Cargo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="matricula" type="Matricula" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="telefoneContato" type="NumeroTerminal" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="emailContato" type="Email" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="unidadeLotacao" type="UnidadeLotacao" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="enderecoLotacao" type="Endereco" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="municipioLotacao" type="Cidade" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ufLotacao" type="SiglaUF" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="tipoAcao" type="TipoAcao" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="tipoAcesso" type="TipoAcesso" minOccurs="1" maxOccurs="unbounded"/>
+      <xsd:element name="permissaoAcesso" type="PermissaoAcesso" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="prazoAcesso" type="DataHora" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ReqAcesso">
+    <xsd:sequence>
+      <xsd:element name="codigoOrdem" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="codigoRequisicao" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ordemInicial" type="xsd:long" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="requisicaoInicial" type="xsd:long" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="usuarioAcesso" type="Usuario" minOccurs="1" maxOccurs="unbounded"/>
+      <xsd:element name="requisicaoRetificadora" type="RequisicaoRetificadora" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="testeConexao" type="TesteConexao" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--ReciboRequisicao-->
+  <xsd:simpleType name="DescricaoProblemaRecusa">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="1000"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SituacaoRequisicao">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ACEITA"/>
+      <xsd:enumeration value="RECUSADA"/>
+      <xsd:enumeration value="CANCELADA"/>
+      <xsd:enumeration value="ORDEM CANCELADA"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ProblemaRecusa">
+    <xsd:sequence>
+      <xsd:element name="linhaProblema" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="descricaoProblema" type="DescricaoProblemaRecusa" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="MotivoRecusa">
+    <xsd:sequence>
+      <xsd:element name="arquivo" type="ArquivoSittel" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="problema" type="ProblemaRecusa" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ReciboRequisicao">
+    <xsd:sequence>
+      <xsd:element name="codigoOrdem" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="codigoRequisicao" type="xsd:long" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="situacaoRequisicao" type="SituacaoRequisicao" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="comprovanteRecebimento" type="xsd:base64Binary" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="arquivosRecebidos" type="ArquivoSittel" minOccurs="1" maxOccurs="4"/>
+      <xsd:element name="motivoRecusa" type="MotivoRecusa" minOccurs="0" maxOccurs="4"/>
+      <xsd:element name="testeConexao" type="TesteConexao" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--Mensagem-->
+  <xsd:simpleType name="TextoMensagem">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="1000"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="Mensagem">
+    <xsd:sequence>
+      <xsd:element name="codigoOrdem" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="codigoRequisicao" type="xsd:long" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="mensagem" type="TextoMensagem" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="anexoMensagem" type="xsd:base64Binary" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="testeConexao" type="TesteConexao" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="CN" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--StatusRequisicao-->
+  <xsd:complexType name="StatusRequisicao">
+    <xsd:sequence>
+      <xsd:element name="codigoOrdem" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="codigoRequisicao" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="limiteAtendimento" type="DataHora" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="testeConexao" type="TesteConexao" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--ResultadoRequisicao-->
+  <xsd:simpleType name="TipoResultadoNegativo">
+    <xsd:restriction base="xsd:int"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="Justificativa">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="1000"/>
+      <xsd:whiteSpace value="collapse"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ResultadoNegativo">
+    <xsd:sequence>
+      <xsd:element name="tipo" type="TipoResultadoNegativo" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="justificativa" type="Justificativa" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="anexo" type="xsd:base64Binary" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ArquivoResultado">
+    <xsd:sequence>
+      <xsd:element name="nome" type="ArquivoSittel" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="xml" type="xsd:base64Binary" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="hash" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaArquivoResultado">
+    <xsd:sequence>
+      <xsd:element name="arquivo" type="ArquivoResultado" minOccurs="0" maxOccurs="4"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="TipoResultadoPositivo">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="PARCIAL|TOTAL"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ResultadoPositivo">
+    <xsd:sequence>
+      <xsd:element name="tipo" type="TipoResultadoPositivo" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="arquivos" type="ListaArquivoResultado" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="ResultadoRetificador">
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+  <xsd:complexType name="ResultadoRequisicao">
+    <xsd:sequence>
+      <xsd:element name="codigoOrdem" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="codigoRequisicao" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="codigoResultado" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+      <xsd:choice minOccurs="1" maxOccurs="1">
+        <xsd:element name="resultadoPositivo" type="ResultadoPositivo"/>
+        <xsd:element name="resultadoNegativo" type="ResultadoNegativo"/>
+      </xsd:choice>
+      <xsd:element name="resultadoRetificador" type="ResultadoRetificador" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="testeConexao" type="TesteConexao" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content>
+        <con:type>http://www.w3.org/2001/XMLSchema</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://sittel.mpm.mp.br/sittel2/servicos/ReceberResultadoRequisicao</con:endpoint>
+    </con:endpoints>
+    <con:operation id="eac59209-af1d-402d-b4aa-15f6e2ff3a55" isOneWay="false" action="http://sittel.mpf.mp.br/schemas/servicos/ReceberResultadoRequisicaoOperation" name="ReceberResultadoRequisicaoOperation" bindingOperationName="ReceberResultadoRequisicaoOperation" type="Request-Response" outputName="ReceberResultadoRequisicaoOutput" inputName="ReceberResultadoRequisicaoInput" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="29a3663c-c256-4e4d-823d-7a2f4251a084" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://sittel.mpm.mp.br/sittel2/servicos/ReceberResultadoRequisicao</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://sittel.mpf.mp.br/schemas/servicos">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:ReceberResultadoRequisicaoRequest>\r
+         <codigoOrdem>10</codigoOrdem>\r
+         <codigoRequisicao>10</codigoRequisicao>\r
+         <codigoResultado>10</codigoResultado>\r
+         <!--You have a CHOICE of the next 2 items at this level-->\r
+         <resultadoPositivo>\r
+            <tipo>gero et</tipo>\r
+            <arquivos>\r
+               <!--0 to 4 repetitions:-->\r
+               <arquivo>\r
+                  <nome>CHAMADAS</nome>\r
+                  <xml>cid:499673276407</xml>\r
+                  <hash>aeoliam venit</hash>\r
+               </arquivo>\r
+            </arquivos>\r
+         </resultadoPositivo>\r
+         <resultadoNegativo>\r
+            <tipo>3</tipo>\r
+            <!--Optional:-->\r
+            <justificativa>ventos tempestatesque</justificativa>\r
+            <!--Optional:-->\r
+            <anexo>cid:285252744373</anexo>\r
+         </resultadoNegativo>\r
+         <!--Optional:-->\r
+         <resultadoRetificador>false</resultadoRetificador>\r
+         <!--Optional:-->\r
+         <testeConexao>false</testeConexao>\r
+      </ser:ReceberResultadoRequisicaoRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sittel.mpf.mp.br/schemas/servicos/ReceberResultadoRequisicaoOperation"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
   <con:mockService id="26745db9-96f6-4e1a-b275-5ba2bb19fd0a" port="8080" path="/customer" host="localhost" name="ms-customer" bindToHostOnly="false" docroot="">
     <con:settings>
       <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting>
@@ -173,6 +944,30 @@
           <con:response>06123216066</con:response>
         </con:query>
       </con:dispatchConfig>
+    </con:mockOperation>
+  </con:mockService>
+  <con:mockService id="66789c8e-5a13-4511-99ce-bc829b186b9f" port="8080" path="/upload" host="localhost" name="ms-upload" bindToHostOnly="false" docroot="">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting>
+    </con:settings>
+    <con:properties/>
+    <con:mockOperation name="ReceberResultadoRequisicaoOperation" id="7c063e9a-d691-4a50-8464-9e80ed8fc509" interface="ReceberResultadoRequisicaoBinding" operation="ReceberResultadoRequisicaoOperation">
+      <con:settings/>
+      <con:defaultResponse>Response 1</con:defaultResponse>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:response name="success" id="ed63b9be-0afe-4875-8381-a0a4de30339f" httpResponseStatus="200" encoding="UTF-8">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://sittel.mpf.mp.br/schemas/servicos">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:ReceberResultadoRequisicaoResponse>
+         <status>OK</status>
+      </ser:ReceberResultadoRequisicaoResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sittel.mpf.mp.br/schemas/servicos/ReceberResultadoRequisicaoOperation"/>
+      </con:response>
+      <con:dispatchConfig/>
     </con:mockOperation>
   </con:mockService>
   <con:properties/>

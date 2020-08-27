@@ -2,4 +2,5 @@
 <con:soapui-workspace name="soap-ws" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:project name="soap-ws">C:/git/github.com/orozimbro/soap-mockservices/soap-ws-soapui-project.xml</con:project>
+  <con:collectInfoForSupport>false</con:collectInfoForSupport>
 </con:soapui-workspace>
